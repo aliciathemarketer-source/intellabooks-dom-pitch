@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IntellaBooks - Your Silent Partner</title>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -94,10 +93,6 @@
             color: var(--gold);
         }
 
-        .accent-navy {
-            color: var(--navy);
-        }
-
         .hero-subtitle {
             font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             color: #6E6E73;
@@ -128,7 +123,7 @@
             50% { transform: translateY(-20px); }
         }
 
-        /* Slide 2-4 - Problem Slides */
+        /* Problem Slides */
         .problem-slide {
             background: var(--light-gray);
         }
@@ -148,7 +143,7 @@
             margin-bottom: 2rem;
         }
 
-        /* Slide 5 - Transition */
+        /* Transition */
         .slide-5 {
             background: linear-gradient(to bottom, var(--light-gray) 0%, var(--white) 100%);
         }
@@ -164,7 +159,7 @@
             50% { filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.6)); }
         }
 
-        /* Slide 6 - Hero Product */
+        /* Hero Product */
         .slide-6 {
             background: var(--navy);
         }
@@ -176,27 +171,18 @@
 
         .dashboard-mockup {
             width: 90%;
-            max-width: 1000px;
-            height: 500px;
-            background: white;
-            border-radius: 24px;
+            max-width: 1200px;
             margin-top: 3rem;
+            border-radius: 24px;
             box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
             overflow: hidden;
+            background: white;
         }
 
-        .dashboard-mockup::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            background: linear-gradient(to bottom, rgba(1, 51, 86, 0.05), transparent);
+        .dashboard-mockup img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Feature Grid */
@@ -366,6 +352,7 @@
             font-weight: 700;
             margin-right: 0.75rem;
             font-size: 1.25rem;
+            flex-shrink: 0;
         }
 
         .tier-for {
@@ -382,7 +369,7 @@
             color: var(--navy);
         }
 
-        /* Comparison Split */
+        /* Comparison Grid */
         .comparison-split {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -431,6 +418,7 @@
             content: "•";
             margin-right: 1rem;
             font-size: 1.5rem;
+            flex-shrink: 0;
         }
 
         .comparison-side.old li::before {
@@ -457,18 +445,6 @@
         .slide-14 h2,
         .slide-14 p {
             color: white;
-        }
-
-        .circle-graphic {
-            width: 400px;
-            height: 400px;
-            margin: 3rem 0;
-            position: relative;
-        }
-
-        .circle-graphic svg {
-            width: 100%;
-            height: 100%;
         }
 
         /* Membership Cards */
@@ -537,6 +513,7 @@
             font-weight: 700;
             margin-right: 0.75rem;
             font-size: 1.25rem;
+            flex-shrink: 0;
         }
 
         .membership-for {
@@ -547,42 +524,12 @@
             font-style: italic;
         }
 
-        .comparison-table {
-            background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            margin-top: 2rem;
-            max-width: 900px;
-            width: 100%;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #F5F5F7;
-        }
-
-        .comparison-table th {
-            font-weight: 600;
-            color: var(--navy);
-        }
-
-        .comparison-table td {
-            color: #6E6E73;
-        }
-
         /* Math Cards */
         .math-card {
             background: linear-gradient(135deg, var(--light-gray) 0%, white 100%);
             padding: 3rem;
             border-radius: 24px;
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
             margin-top: 2rem;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
@@ -596,14 +543,6 @@
 
         .math-step:last-child {
             border-bottom: none;
-        }
-
-        .math-result {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--gold);
-            text-align: center;
-            margin: 2rem 0;
         }
 
         /* Empire Projection */
@@ -795,51 +734,52 @@
         <div class="slide-number">01</div>
         <div class="hourglass-icon">⏳</div>
         <h1>Your Time Is Worth <span class="accent-gold">$1,000/Hour</span></h1>
-        <p class="hero-subtitle">So why are you paying someone $15-$25/hr to answer phones?</p>
+        <p class="hero-subtitle">Let us handle the heavy lifting so you can focus on what you love—and scale your business.</p>
     </div>
 
-    <!-- Slide 2: Problem - Human Limitation -->
+    <!-- Slide 2: Your Team Needs Backup -->
     <div class="slide slide-2 problem-slide">
         <div class="slide-number">02</div>
-        <h2>The Human Limitation</h2>
+        <h2>Your Team Needs Backup</h2>
         <div class="problem-card">
-            <div class="problem-icon">🕐</div>
-            <h3>Your receptionist works 8 hours. Then they go home.</h3>
-            <p>But your clients call at 7pm. Your leads text on Saturday. Your opportunities don't respect office hours.</p>
+            <div class="problem-icon">⏰</div>
+            <h3>Your people are amazing at what they do. But they can't be everywhere at once.</h3>
+            <p>When your team clocks out at 5pm, your clients are still calling at 7pm. Leads are texting on Saturday. Opportunities are happening around the clock. You need a silent partner that works the hours your team can't—so they can focus on what they do best.</p>
         </div>
     </div>
 
-    <!-- Slide 3: Problem - The Real Cost -->
+    <!-- Slide 3: The Challenge of Scaling -->
     <div class="slide slide-3 problem-slide">
         <div class="slide-number">03</div>
-        <h2>The Math That Doesn't Add Up</h2>
+        <h2>The Challenge of Scaling</h2>
         <div class="problem-card">
-            <div class="problem-icon">💸</div>
-            <h3>The Real Cost</h3>
-            <p style="margin-bottom: 1.5rem;">Receptionist salary: <strong>$15-$25/hour</strong></p>
+            <div class="problem-icon">📊</div>
+            <h3>Growing your team is expensive—and slow.</h3>
+            <p style="margin-bottom: 1.5rem;">To add real capacity, you're looking at:</p>
             <ul style="list-style: none; margin: 1rem 0;">
-                <li style="padding: 0.5rem 0;">• 40 hours per week = <strong>$2,400 - $4,000/month</strong></li>
-                <li style="padding: 0.5rem 0;">• Plus: benefits, sick days, vacation, training time</li>
-                <li style="padding: 0.5rem 0;">• Reality: You're paying for 160 hours but getting maybe <strong>120 of productive time</strong></li>
+                <li style="padding: 0.5rem 0;">• <strong>$2,400 - $4,000/month</strong> for each new hire</li>
+                <li style="padding: 0.5rem 0;">• Weeks of recruiting, interviewing, onboarding</li>
+                <li style="padding: 0.5rem 0;">• Training time before they're fully productive</li>
+                <li style="padding: 0.5rem 0;">• Coverage gaps during vacation, sick days, turnover</li>
             </ul>
         </div>
     </div>
 
-    <!-- Slide 4: Problem - Scaling Nightmare -->
+    <!-- Slide 4: Scaling Requires Support -->
     <div class="slide slide-4 problem-slide">
         <div class="slide-number">04</div>
-        <h2>The Scaling Nightmare</h2>
+        <h2>Scaling Requires Support</h2>
         <div class="problem-card">
-            <div class="problem-icon">📈</div>
-            <h3>Want to grow? Multiply everything by 10.</h3>
-            <p>More offices = more receptionists = more hiring, training, managing, replacing. There's no shortcut... until now.</p>
+            <div class="problem-icon">🚀</div>
+            <h3>Your vision is bigger than your current team can handle alone.</h3>
+            <p>Opening new offices? Serving more clients? Growing your territory? You need systems that scale as fast as your ambition—without overwhelming your people. You need a teammate that never gets tired, never needs training, and makes everyone's job easier.</p>
         </div>
     </div>
 
     <!-- Slide 5: Transition -->
     <div class="slide slide-5">
         <div class="slide-number">05</div>
-        <h2>What if you had a silent partner who<br>never slept, never forgot, and cost 60% less?</h2>
+        <h2>What if you had a silent partner who worked<br>24/7, never forgot a detail, and made your team unstoppable?</h2>
         <div class="key-icon">🔑</div>
     </div>
 
@@ -850,7 +790,7 @@
         <p class="hero-subtitle">Your Silent Partner</p>
         <p class="hero-subtitle" style="font-size: 1.25rem; margin-top: 0.5rem;">Always on. Always learning. Infinitely scalable.</p>
         <div class="dashboard-mockup">
-            <p style="color: var(--navy); font-size: 2rem; font-weight: 600;">✨ Elegant Dashboard Interface</p>
+            <img src="/mnt/user-data/uploads/1769889774149_image.png" alt="IntellaBooks Dashboard" style="width: 100%; height: auto; display: block;">
         </div>
     </div>
 
@@ -867,9 +807,9 @@
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🧠</div>
-                <h3>Remembers Everything</h3>
-                <p>Every conversation, every client preference, every promise made—captured automatically in your command center (what tech people call a CRM, but think of it as your business memory).</p>
-                <p class="tech-note">Full pipeline automation & relationship tracking</p>
+                <h3>Captures Every Detail</h3>
+                <p>Every conversation, every client preference, every promise made—it all gets added to your CRM automatically. Then uses those details to personalize every email and text, making each client feel like they're your only client.</p>
+                <p class="tech-note">Smart CRM population & dynamic personalization</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💌</div>
@@ -880,32 +820,32 @@
         </div>
     </div>
 
-    <!-- Slide 8: Pricing Truth -->
+    <!-- Slide 8: Pricing -->
     <div class="slide slide-8 problem-slide">
         <div class="slide-number">08</div>
-        <h2>Simple, Transparent Pricing</h2>
+        <h2>Pricing That Makes Sense</h2>
         <div class="pricing-card">
-            <p style="margin-bottom: 1.5rem; font-size: 1.125rem;">No hidden fees. No complicated contracts. Just pay per hour, like hiring someone—except this team member never sleeps.</p>
+            <p style="margin-bottom: 1.5rem; font-size: 1.125rem;">We keep it simple. Pay by the hour, just like you would for a team member—except this one works around the clock and makes everyone's life easier.</p>
             
-            <div class="price-highlight">The Call Costs:</div>
+            <div class="price-highlight">Here's the best part:</div>
             <ul style="list-style: none; margin: 1.5rem 0;">
-                <li class="price-number" style="padding: 0.75rem 0;">📞 15¢ per minute for all calling</li>
-                <li class="price-number" style="padding: 0.75rem 0;">🎁 First 1,000 minutes FREE every month (that's 16+ hours of call time!)</li>
+                <li class="price-number" style="padding: 0.75rem 0;">📞 15¢ per minute for calls (totally reasonable)</li>
+                <li class="price-number" style="padding: 0.75rem 0;">🎁 First 1,000 minutes FREE every month (that's over 16 hours!)</li>
             </ul>
 
             <div style="background: var(--light-gray); padding: 2rem; border-radius: 16px; margin-top: 2rem; text-align: center;">
-                <h3 style="color: var(--navy); margin-bottom: 1rem;">Traditional Receptionist</h3>
-                <p class="price-number">$15-$25/hour</p>
-                <p style="margin-top: 1rem;">40 hours/week, benefits, turnover risk, office hours only</p>
+                <h3 style="color: var(--navy); margin-bottom: 1rem;">Adding Another Person</h3>
+                <p class="price-number">$15-$25/hour + benefits</p>
+                <p style="margin-top: 1rem;">Works 40 hours/week, needs time off, limited to one location</p>
                 
                 <div style="margin: 2rem 0; font-size: 2rem;">VS</div>
                 
-                <h3 style="color: var(--gold); margin-bottom: 1rem;">IntellaBooks</h3>
-                <p class="price-number" style="color: var(--gold);">$15-$25/hour (based on tier)</p>
-                <p style="margin-top: 1rem;">24/7/365, never forgets, scales infinitely, works 168 hours/week</p>
+                <h3 style="color: var(--gold); margin-bottom: 1rem;">Adding IntellaBooks</h3>
+                <p class="price-number" style="color: var(--gold);">$15-$25/hour (based on what you need)</p>
+                <p style="margin-top: 1rem;">Available 24/7/365, handles unlimited volume, supports your whole team</p>
             </div>
 
-            <p style="margin-top: 2rem; text-align: center; font-style: italic; font-size: 1.125rem; color: var(--navy); font-weight: 600;">Choose your tier based on what your business needs →</p>
+            <p style="margin-top: 2rem; text-align: center; font-style: italic; font-size: 1.125rem; color: var(--navy); font-weight: 600;">Pick the level that fits where you are today →</p>
         </div>
     </div>
 
@@ -942,25 +882,26 @@
         <div class="slide-number">10</div>
         <div class="tier-container">
             <div class="tier-card growth">
-                <div class="tier-badge">MULTI-CHANNEL CLOSER</div>
+                <div class="tier-badge">FULL-SERVICE MARKETING</div>
                 <h3 class="tier-title">Growth</h3>
-                <p class="tier-subtitle">When you're ready to stand out and close more deals</p>
+                <p class="tier-subtitle">When you're ready to nurture clients like never before</p>
                 <div class="tier-price">$20<span style="font-size: 1.25rem; font-weight: 400;">/hour</span></div>
-                <p class="tier-price-note">Your competitive advantage</p>
+                <p class="tier-price-note">Your complete marketing team</p>
                 
                 <p style="text-align: center; font-weight: 600; color: var(--navy); margin-bottom: 1rem;">Everything in Core, PLUS:</p>
                 
                 <ul class="tier-features">
-                    <li><strong>Automated Direct Mail</strong> - Physical cards and letters sent automatically (birthdays, follow-ups, thank-yous)</li>
-                    <li><strong>Smart Prioritization</strong> - System learns which leads are most valuable</li>
-                    <li><strong>Monthly Newsletters</strong> - Professional email campaigns to keep clients engaged</li>
-                    <li><strong>Your Own Branded Text Number</strong> - Official business SMS (not a random number)</li>
+                    <li><strong>Professional Email & SMS Design</strong> - Beautiful templates that convert (not generic basics)</li>
+                    <li><strong>💎 Direct Mail Integration</strong> - This is ICONIC. Physical cards, letters, postcards sent automatically (birthday cards, thank-you notes, stay-in-touch campaigns)</li>
+                    <li><strong>Custom Email Designs</strong> - Branded monthly newsletters that match your identity perfectly</li>
+                    <li><strong>Physical Marketing Materials</strong> - Business cards, flyers, signage for your locations</li>
+                    <li><strong>Lookalike Targeting</strong> - We model your best existing clients to find more people just like them for your ads</li>
                     <li><strong>Priority Support</strong> - Faster response when you need help</li>
                     <li>First 1,000 call minutes FREE, then 15¢/min</li>
                 </ul>
 
                 <div class="tier-for">
-                    <p>"You want clients to feel special and you want to close more business"</p>
+                    <p>"You want a full-service marketing team nurturing your clients at scale"</p>
                 </div>
             </div>
         </div>
@@ -971,7 +912,7 @@
         <div class="slide-number">11</div>
         <div class="tier-container">
             <div class="tier-card elite">
-                <div class="tier-badge">MARKET DOMINATOR</div>
+                <div class="tier-badge">SOCIAL & ADS POWERHOUSE</div>
                 <h3 class="tier-title">Elite</h3>
                 <p class="tier-subtitle">When you're building an empire, not just a business</p>
                 <div class="tier-price">$25<span style="font-size: 1.25rem; font-weight: 400;">/hour</span></div>
@@ -980,117 +921,147 @@
                 <p style="text-align: center; font-weight: 600; color: var(--navy); margin-bottom: 1rem;">Everything in Growth, PLUS:</p>
                 
                 <ul class="tier-features">
-                    <li><strong>Custom Email Designs</strong> - Gorgeous monthly emails that match your brand perfectly</li>
-                    <li><strong>Your Own Developer Team</strong> - We build custom tools specifically for your business</li>
-                    <li><strong>Professional Ad Management</strong> - We run your Facebook & Google ads (testing, tracking, optimizing)</li>
-                    <li><strong>Social Media Management</strong> - Consistent posting, engagement, brand building</li>
-                    <li><strong>White-Glove Support</strong> - Dedicated account manager who knows your business</li>
-                    <li><strong>A/B Testing</strong> - We constantly improve what's working</li>
+                    <li><strong>Social Media Management</strong> - Consistent posting, engagement, community building across platforms</li>
+                    <li><strong>Professional Ad Management</strong> - We run your Facebook & Google ads with expert testing, tracking, and optimization</li>
+                    <li><strong>A/B Testing</strong> - We constantly improve what's working based on real data</li>
+                    <li><strong>Your Own Developer Team</strong> - We build custom tools and integrations specifically for your business</li>
+                    <li><strong>White-Glove Support</strong> - Dedicated account manager who knows your business inside and out</li>
+                    <li><strong>Priority Everything</strong> - You're at the front of the line for all support and requests</li>
                     <li>First 1,000 call minutes FREE, then 15¢/min</li>
                 </ul>
 
                 <div class="tier-for">
-                    <p>"You're scaling fast and need a tech team without hiring a tech team"</p>
+                    <p>"You're scaling fast and need a complete tech + marketing team without the overhead"</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Slide 12: Comparison -->
-    <div class="slide slide-12">
+    <!-- Slide 12: Side-by-Side Tier Comparison -->
+    <div class="slide slide-12 problem-slide">
         <div class="slide-number">12</div>
-        <h2>The Real Comparison</h2>
+        <h2>At A Glance: Choose Your Level</h2>
+        <div class="tier-container">
+            <div class="tier-card core">
+                <div class="tier-badge">CORE</div>
+                <div class="tier-price">$15<span style="font-size: 1rem; font-weight: 400;">/hr</span></div>
+                <p style="text-align: center; margin: 1rem 0; font-weight: 600; color: var(--navy);">The Foundation</p>
+                <ul style="list-style: none; font-size: 0.95rem;">
+                    <li style="padding: 0.5rem 0;">✓ AI Voice (inbound/outbound)</li>
+                    <li style="padding: 0.5rem 0;">✓ CRM & Pipeline</li>
+                    <li style="padding: 0.5rem 0;">✓ SMS & Email Automation</li>
+                    <li style="padding: 0.5rem 0;">✓ Calendar Booking</li>
+                    <li style="padding: 0.5rem 0;">✓ 1,000 free minutes/mo</li>
+                </ul>
+            </div>
+
+            <div class="tier-card growth">
+                <div class="tier-badge">GROWTH</div>
+                <div class="tier-price">$20<span style="font-size: 1rem; font-weight: 400;">/hr</span></div>
+                <p style="text-align: center; margin: 1rem 0; font-weight: 600; color: var(--navy);">Full Marketing Team</p>
+                <ul style="list-style: none; font-size: 0.95rem;">
+                    <li style="padding: 0.5rem 0;">✓ Everything in Core</li>
+                    <li style="padding: 0.5rem 0;">✓ Pro Email & SMS Design</li>
+                    <li style="padding: 0.5rem 0;">✓ 💎 Direct Mail (iconic!)</li>
+                    <li style="padding: 0.5rem 0;">✓ Custom Email Designs</li>
+                    <li style="padding: 0.5rem 0;">✓ Physical Materials</li>
+                    <li style="padding: 0.5rem 0;">✓ Lookalike Targeting</li>
+                </ul>
+            </div>
+
+            <div class="tier-card elite">
+                <div class="tier-badge">ELITE</div>
+                <div class="tier-price">$25<span style="font-size: 1rem; font-weight: 400;">/hr</span></div>
+                <p style="text-align: center; margin: 1rem 0; font-weight: 600; color: var(--navy);">Social & Ads Powerhouse</p>
+                <ul style="list-style: none; font-size: 0.95rem;">
+                    <li style="padding: 0.5rem 0;">✓ Everything in Growth</li>
+                    <li style="padding: 0.5rem 0;">✓ Social Media Management</li>
+                    <li style="padding: 0.5rem 0;">✓ Professional Ad Management</li>
+                    <li style="padding: 0.5rem 0;">✓ Developer Team</li>
+                    <li style="padding: 0.5rem 0;">✓ Dedicated Account Manager</li>
+                    <li style="padding: 0.5rem 0;">✓ White-Glove Support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 13: Capacity Comparison -->
+    <div class="slide slide-13">
+        <div class="slide-number">13</div>
+        <h2>Adding Capacity vs. Adding Headcount</h2>
         <div class="comparison-split">
             <div class="comparison-side old">
-                <h3>The Old Way</h3>
+                <h3>Hiring Another Person</h3>
                 <ul class="comparison-list">
-                    <li>Hire receptionist: $15-$25/hour</li>
-                    <li>Office hours only (40 hrs/week)</li>
-                    <li>Sick days, vacations, turnover</li>
-                    <li>Forgets to follow up</li>
-                    <li>Can't send physical mail automatically</li>
-                    <li>One person = one timezone</li>
+                    <li>$15-$25/hour + benefits</li>
+                    <li>Works 40 hours/week</li>
+                    <li>Needs vacation, sick days, coverage</li>
+                    <li>Requires training and onboarding time</li>
+                    <li>Limited to one location at a time</li>
+                    <li>Turnover means starting over</li>
                 </ul>
             </div>
             <div class="comparison-side new">
-                <h3>The IntellaBooks Way</h3>
+                <h3>Adding IntellaBooks to Your Team</h3>
                 <ul class="comparison-list">
                     <li>$15-$25/hour (based on tier)</li>
-                    <li>24/7/365 (168 hrs/week)</li>
-                    <li>Never takes a day off</li>
-                    <li>Never forgets anything</li>
-                    <li>Sends cards, letters, texts, emails automatically</li>
-                    <li>Works everywhere, instantly</li>
+                    <li>Available 24/7/365 (168 hrs/week)</li>
+                    <li>Never needs time off—always backing up your team</li>
+                    <li>Ready day one—no training required</li>
+                    <li>Works across all locations simultaneously</li>
+                    <li>Handles the overflow so your people can focus</li>
                 </ul>
             </div>
         </div>
         <div class="bottom-line">
-            Same hourly rate. 4× the coverage. Zero drama.<br>And you can scale infinitely.
+            Same hourly investment. Infinite capacity. Your team stays focused on high-value work.
         </div>
     </div>
 
-    <!-- Slide 13: Proof -->
-    <div class="slide slide-13 problem-slide">
-        <div class="slide-number">13</div>
+    <!-- Slide 14: Proof -->
+    <div class="slide slide-14">
+        <div class="slide-number">14</div>
         <h2>Already Trusted By Smart Operators</h2>
         <div class="feature-grid" style="max-width: 900px;">
             <div class="feature-card">
                 <div class="feature-icon">📊</div>
-                <h3>Tax Professionals</h3>
-                <p>Reactivating 2025 clients automatically</p>
+                <h3 style="color: var(--dark-gray);">Tax Professionals</h3>
+                <p style="color: var(--dark-gray);">Reactivating 2025 clients automatically</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🛡️</div>
-                <h3>Insurance Agencies</h3>
-                <p>Policy renewals that never get missed</p>
+                <h3 style="color: var(--dark-gray);">Insurance Agencies</h3>
+                <p style="color: var(--dark-gray);">Policy renewals that never get missed</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🏡</div>
-                <h3>Real Estate Teams</h3>
-                <p>Listing appointments booked 24/7</p>
+                <h3 style="color: var(--dark-gray);">Real Estate Teams</h3>
+                <p style="color: var(--dark-gray);">Listing appointments booked 24/7</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💆</div>
-                <h3>Medical Spas</h3>
-                <p>Patient reactivation on autopilot</p>
+                <h3 style="color: var(--dark-gray);">Medical Spas</h3>
+                <p style="color: var(--dark-gray);">Patient reactivation on autopilot</p>
             </div>
         </div>
-        <p style="margin-top: 3rem; font-size: 1.5rem; font-weight: 600; color: var(--navy); text-align: center;">
+        <p style="margin-top: 3rem; font-size: 1.5rem; font-weight: 600; color: var(--white); text-align: center;">
             Average client saves 15+ hours per week while closing 30% more deals
         </p>
     </div>
 
-    <!-- Slide 14: The Invitation -->
-    <div class="slide slide-14">
-        <div class="slide-number">14</div>
+    <!-- Slide 15: The Invitation -->
+    <div class="slide slide-15 slide-14">
+        <div class="slide-number">15</div>
         <h2 style="color: var(--gold);">But here's where your real opportunity begins...</h2>
         <div class="key-icon" style="color: var(--gold);">✨</div>
         <p class="hero-subtitle">An exclusive partnership for elite operators who see the bigger picture</p>
     </div>
 
-    <!-- Slide 15: Welcome to White-Glove Circle -->
-    <div class="slide slide-15">
-        <div class="slide-number">15</div>
-        <h2>Welcome to <span class="accent-gold">The White-Glove Circle</span></h2>
-        <p class="hero-subtitle" style="max-width: 900px;">You're not just buying software. You're joining a private community of high-earners who build recurring revenue empires.</p>
-        
-        <div class="circle-graphic">
-            <svg viewBox="0 0 400 400">
-                <circle cx="200" cy="200" r="150" fill="none" stroke="var(--gold)" stroke-width="3" opacity="0.3"/>
-                <circle cx="200" cy="200" r="120" fill="none" stroke="var(--gold)" stroke-width="2" opacity="0.5"/>
-                <circle cx="200" cy="200" r="90" fill="none" stroke="var(--gold)" stroke-width="2" opacity="0.7"/>
-                <circle cx="200" cy="200" r="60" fill="var(--gold)" opacity="0.2"/>
-                <text x="200" y="200" text-anchor="middle" dominant-baseline="middle" fill="var(--navy)" font-size="24" font-weight="700">Elite</text>
-                <text x="200" y="230" text-anchor="middle" dominant-baseline="middle" fill="var(--navy)" font-size="18">Partnership</text>
-            </svg>
-        </div>
-    </div>
-
-    <!-- Slide 16: Membership Tiers -->
+    <!-- Slide 16: Partnership Offer -->
     <div class="slide slide-16">
         <div class="slide-number">16</div>
-        <h2>Your Exclusive Partner Rates</h2>
-        <p class="hero-subtitle">These numbers are not public. This opportunity is invitation-only.</p>
+        <h2>Your Exclusive Partner Offer</h2>
+        <p class="hero-subtitle">This offer is invitation-only and not available to the public.</p>
         
         <div class="membership-grid">
             <div class="membership-card">
@@ -1113,62 +1084,27 @@
             </div>
 
             <div class="membership-card premium">
-                <div class="membership-badge">WHITE-GLOVE</div>
-                <h3 class="tier-title">White-Glove Tier</h3>
-                <div class="membership-price">$1,500<span style="font-size: 1.5rem; font-weight: 400;">/month</span></div>
-                <p style="text-align: center; color: #6E6E73; margin-bottom: 1.5rem;">Flat rate with full branding rights</p>
+                <div class="membership-badge">EXCLUSIVE ELITE OFFER</div>
+                <h3 class="tier-title">Elite Ad Package</h3>
+                <div class="membership-price">$3,000<span style="font-size: 1.5rem; font-weight: 400;">/month</span></div>
+                <p style="text-align: center; color: #6E6E73; margin-bottom: 1.5rem;">The full Elite tier—exclusively for you</p>
                 
-                <p style="text-align: center; font-weight: 600; color: var(--navy); margin-bottom: 1rem;">Everything in Partnership, PLUS:</p>
+                <p style="text-align: center; font-weight: 600; color: var(--navy); margin-bottom: 1rem;">Because you're an exclusive partner:</p>
                 
                 <ul class="membership-features">
-                    <li><strong>Your brand only</strong> (DW Consulting OS, your logo, your identity)</li>
-                    <li>100% client data sovereignty (they're YOUR clients, period)</li>
-                    <li>Premium sub-licensing rights (sell partnerships to others)</li>
-                    <li>Dedicated account architect</li>
-                    <li><strong>You keep 100% of all upsell profits—it's completely your business</strong></li>
+                    <li><strong>Everything in Elite tier</strong> (normally $25/hr = $4,000/mo)</li>
+                    <li>Social media management across all platforms</li>
+                    <li>Professional ad management (Facebook & Google)</li>
+                    <li>Your own developer team for custom builds</li>
+                    <li>Dedicated account manager</li>
+                    <li>White-glove support with priority everything</li>
+                    <li><strong>You save $1,000/month</strong> as our partner</li>
                 </ul>
 
                 <div class="membership-for">
-                    <p>"You're building a tech empire under your own name"</p>
+                    <p>"You get Elite-level support while building your reseller business"</p>
                 </div>
             </div>
-        </div>
-
-        <div class="comparison-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Partnership</th>
-                        <th>White-Glove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Your Monthly Cost</td>
-                        <td>$1,000</td>
-                        <td>$1,500</td>
-                    </tr>
-                    <tr>
-                        <td>Minimum Resale Price</td>
-                        <td colspan="2">$15/hr (Core), $20/hr (Growth), $25/hr (Elite)</td>
-                    </tr>
-                    <tr>
-                        <td>Branding</td>
-                        <td>IntellaBooks</td>
-                        <td><strong>YOUR BRAND</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Client Ownership</td>
-                        <td>Shared</td>
-                        <td><strong>100% Yours</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Your Profit</td>
-                        <td colspan="2"><strong>100% of any upsell above retail</strong></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 
@@ -1322,40 +1258,40 @@
     <!-- Slide 19: Final Decision -->
     <div class="slide slide-19">
         <div class="slide-number">19</div>
-        <h2>You Have Two Paths</h2>
+        <h2>Two Paths Forward</h2>
         
         <div class="decision-split">
             <div class="decision-path stay">
-                <div class="path-icon">🚶</div>
-                <h3>Stay Where You Are</h3>
+                <div class="path-icon">💭</div>
+                <h3>Continue As You Are</h3>
                 <ul class="decision-list">
-                    <li>Keep hiring receptionists at $15-$25/hr</li>
-                    <li>Keep managing turnover and sick days</li>
-                    <li>Keep missing calls after hours</li>
-                    <li>Keep doing it all yourself</li>
+                    <li>Keep your current systems and processes</li>
+                    <li>Manage capacity challenges as they come</li>
+                    <li>Handle after-hours inquiries as you can</li>
+                    <li>Grow at your own pace</li>
                 </ul>
                 <div class="outcome">
-                    Outcome: Same stress, same limits
+                    This works. You're doing well. And we respect that.
                 </div>
             </div>
 
             <div class="decision-path empire">
                 <div class="path-icon">🚀</div>
-                <h3>Build Your Empire</h3>
+                <h3>Partner With Us</h3>
                 <ul class="decision-list">
-                    <li>Use IntellaBooks for your business</li>
-                    <li>Offer it to your network at retail</li>
-                    <li>Collect $1,500-$2,000 per client, monthly, forever</li>
-                    <li>Help others grow while you build passive income</li>
+                    <li>Use IntellaBooks to support your business 24/7</li>
+                    <li>Offer it to your network at retail pricing (or higher)</li>
+                    <li>Build passive income: $640-$800+ per client, monthly, forever</li>
+                    <li>Help others grow while you build scalable wealth</li>
                 </ul>
                 <div class="outcome">
-                    Outcome: Recurring revenue. Scalable wealth. Time freedom.
+                    Recurring revenue. Compound growth. Time freedom.
                 </div>
             </div>
         </div>
 
         <div class="cta">
-            Let's start with your first implementation.<br>Your empire begins today.
+            We would love to work with you and get you started as soon as possible.
         </div>
     </div>
 
